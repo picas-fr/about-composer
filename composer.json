@@ -1,0 +1,19 @@
+{
+    "name": "picas-fr/about-composer",
+    "description": "Test package to begin with Composer",
+    "require": {
+        "php": ">5.3.0",
+        "atelierspierrot/library": "dev-master"
+    },
+    "require-dev": {
+        "atelierspierrot/markdown-extended": "v0.1-alpha"
+    },
+    "license": "free",
+    "authors": [
+        {
+            "name": "picas",
+            "email": "picas@smile.fr"
+        }
+    ],
+    "minimum-stability": "dev"
+}

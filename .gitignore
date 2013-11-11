@@ -1,0 +1,30 @@
+# See <http://github.com/atelierspierrot/atelierspierrot/common/gitignore.txt>
+
+### OS & software files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+._*
+*~
+*~lock*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE files
+# to be commented to include them in a project
+.project
+.buildpath
+.idea/*
+
+# the composer lock file
+composer.lock
+
+# any "tmp*" file or dir anywhere
+*tmp*
+
+# the external packages installed by Composer
+vendor/*
