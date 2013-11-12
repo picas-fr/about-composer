@@ -15,5 +15,6 @@
             "email": "picas@smile.fr"
         }
     ],
+    "autoload": { "psr-0": { "TestNamespace": "src" } },
     "minimum-stability": "dev"
 }
