@@ -1,5 +1,5 @@
-<h1>Package's README.md</h1>
-<p class="lead">This content is the <code>README.md</code> file of the package, parsed by <var title="http://github.com/atelierspierrot/markdown-extended">Markdown Extended</var> if dependencies are installed.</p>
+<h1>Package's README</h1>
+<p class="lead">This content is the <code>README.md</code> file of the package, parsed by <var title="http://github.com/atelierspierrot/markdown-extended">Markdown Extended</var> if "dev" dependencies are installed, as plain text markdown otherwise.</p>
 <hr>
 <div class="starter-template">
 <?php
