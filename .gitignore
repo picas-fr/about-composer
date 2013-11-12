@@ -28,3 +28,7 @@ composer.lock
 
 # the external packages installed by Composer
 vendor/*
+
+# hide composer bin for this test package
+# this allows to install composer in the root directory
+*composer.phar
