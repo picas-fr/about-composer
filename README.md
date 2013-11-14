@@ -1,5 +1,5 @@
-About Composer
-==============
+Composer - an initiation
+========================
 
 Presentation and small "how-to" about [Composer](http://getcomposer.org/) and its indispensable
 friend [Packagist](http://packagist.org/).
@@ -14,25 +14,27 @@ for a small web test page (requires PHP 5.3+).
 
 >   a dependency manager for PHP
 
-### How does it work?
-
--   single PHP script that embeds a full application (PHP archive "phar" - < 1M) that you use as 
-    a command line binary
--   handles a set of dependencies (install/update/uninstall) with complex version number selection
--   generates an autoloader to easily use dependencies (and the root package)
--   based on a single configuration file in the root package
-
 ### What is Packagist?
 
 >   the main Composer repository
+
+### How does it work?
+
+-   single PHP script that embeds a full application that you use as a command line binary
+    (PHP archive "phar" < 1M)
+-   handles a set of dependencies (install/update/uninstall) with complex version number selection
+-   generates an autoloader to easily use dependencies and the root package itself
+-   based on a single configuration file in the root package
 
 
 ## Step by step
 
 ### Install Composer
 
-The single file can be installed locally as `composer.phar` or globally as `composer` command.
+The single file can be installed locally as `composer.phar` or globally as `composer` command:
 
+    $ curl -sS https://getcomposer.org/installer | php
+    // or
     $ curl -sS https://getcomposer.org/installer | php -- --install-dir=target/path
 
 Then use it as a classic command:
@@ -52,7 +54,7 @@ To get help, run:
 Full schema is explained at <http://getcomposer.org/doc/04-schema.md>.
 Composer's `init` command can help create a configuration file prompting basic infos.
 
-Basic confg file of the root package:
+Basic config file of the root package:
 
     // composer.json
     {
@@ -65,7 +67,7 @@ Basic confg file of the root package:
         }
     }
 
-For complete review of version number in Composer, see <http://getcomposer.org/doc/01-basic-usage.md#package-versions>.
+For a complete review of version number in Composer, see <http://getcomposer.org/doc/01-basic-usage.md#package-versions>.
 
 ### Managing dependencies
 
@@ -92,9 +94,11 @@ as they all correctly define their autoloading).
 
     require_once 'root-package/vendor/composer/autoload.php';
 
-The root package and their dependencies can (MUST ?) use the [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
-ruleset to construct their filesystem architecture. It's of autoloading method the most commonly
-used, based on the [SplClassLoader](https://gist.github.com/jwage/221634).
+that's it!
+
+The root package and its dependencies can (MUST ?) use the [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
+ruleset to construct their filesystem architecture. It's the autoloading method the most commonly
+used in PHP, based on the [SplClassLoader](https://gist.github.com/jwage/221634).
 
 To define your own package loading rules, write in your "composer.json":
 
@@ -138,7 +142,7 @@ For instance, for the `mypackage/myname/` package:
 switch from one to the other
 
 `dump-autoload`
-:   generate the autoloader ; usefull in case of error or if you change your root package
+:   generate the autoloader ; useful in case of error or if you change your root package
 autoloading configuration
 
 `create-project`
@@ -226,4 +230,4 @@ and authored by:
 
 ----
 
-Repo by [**picas**](picas@smile.fr) for [Smile](http://www.smile.fr/) - under free license.
+Repo by [**picas**](picas@smile.fr) - attached but not liable to [Smile](http://www.smile.fr/) - under free license - educational work.
